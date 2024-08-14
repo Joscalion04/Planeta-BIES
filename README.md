@@ -18,4 +18,4 @@ Este proyecto es un ejemplo de aplicación Java con Maven que implementa pruebas
 Para clonar el repositorio, abre la terminal y navega al directorio donde deseas clonar el proyecto. Luego, ejecuta el siguiente comando:
 
 ```sh
-clone https://github.com/Joscalion04/Planeta-BIES.git
+git clone https://github.com/Joscalion04/Planeta-BIES.git
