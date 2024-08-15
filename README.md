@@ -11,11 +11,13 @@ Este proyecto es un ejemplo de aplicación Java con Maven que implementa pruebas
 - Maven 3.6.3 o superior
 - Git
 
-## Instalación
+## Instalación y Ejecucion
 
 ### Clonar el Repositorio
 
 Para clonar el repositorio, abre la terminal y navega al directorio donde deseas clonar el proyecto. Luego, ejecuta el siguiente comando:
+- " git clone https://github.com/Joscalion04/Planeta-BIES.git "
 
-```sh
-git clone https://github.com/Joscalion04/Planeta-BIES.git
+### Testing
+Para hacer testing sobre los cambios realizados, abre la terminal y navega al directorio donde se encuentre el archvi pom.xml. Luego, ejecuta el siguiente comando:
+- " mvn test "
