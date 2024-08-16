@@ -1,10 +1,11 @@
 package com.mycompany.bies.Entidades.Comportamientos;
+import com.mycompany.bies.Entidades.degradacionMotora;
 import com.mycompany.bies.Entidades.serVivo;
-import java.util.Random;
 
 
 public class VolarDecorador extends InsectoDecorador {
     private int numAlas;
+    VoladorStrategy voladorStrategy = new volar();
 
     public VolarDecorador(serVivo decoratedInsecto, int numAlas) {
         super(decoratedInsecto);
@@ -12,22 +13,12 @@ public class VolarDecorador extends InsectoDecorador {
     }
 
     public void volar() {
-        degradacionMotora();
-        if(numAlas>=2){
-            System.out.println("Vuela");
-        }else{
-            System.out.println("No puedo volar");
-        }
+        String resultado = voladorStrategy.volarr(numAlas, new degradacionMotora());
+        System.out.println(resultado);
     }
 
     @Override
     public void display(int accion) {
         volar();
-    }
-
-    public void degradacionMotora(){
-        if(new Random().nextInt(numAlas) == 0){
-            numAlas--;
-        }
     }
 }

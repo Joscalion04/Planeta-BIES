@@ -1,10 +1,11 @@
 package com.mycompany.bies.Entidades.Comportamientos;
+import com.mycompany.bies.Entidades.degradacionMotora;
 import com.mycompany.bies.Entidades.serVivo;
-import java.util.Random;
 
 
 public class CaminarDecorador extends InsectoDecorador {
     private int numPatas;
+    private caminarStrategy caminanteStrategy = new caminar();
 
     public CaminarDecorador(serVivo decoratedInsecto, int numPatas) {
         super(decoratedInsecto);
@@ -16,18 +17,8 @@ public class CaminarDecorador extends InsectoDecorador {
     }
 
     public void caminar() {
-        degradacionMotora();
-        if(numPatas>=2){
-            System.out.println("Camina");
-        }else{
-            System.out.println("No puedo caminar");
-        }
-    }
-
-    public void degradacionMotora(){
-        if(new Random().nextInt(numPatas) == 0){
-            numPatas--;
-        }
+        String resultado = caminanteStrategy.caminarr(numPatas, new degradacionMotora());
+        System.out.println(resultado);
     }
 
 }
