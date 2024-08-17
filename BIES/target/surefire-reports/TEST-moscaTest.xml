@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="moscaTest" time="0.021" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="moscaTest" time="0.023" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="22"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="MX"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
-    <property name="sun.java.command" value="C:\Users\az885\AppData\Local\Temp\surefire15972682785320740557\surefirebooter-20240815193214897_3.jar C:\Users\az885\AppData\Local\Temp\surefire15972682785320740557 2024-08-15T19-32-14_646-jvmRun1 surefire-20240815193214897_1tmp surefire_0-20240815193214897_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\az885\AppData\Local\Temp\surefire10026185541289368223\surefirebooter-20240817104105027_3.jar C:\Users\az885\AppData\Local\Temp\surefire10026185541289368223 2024-08-17T10-41-04_652-jvmRun1 surefire-20240817104105027_1tmp surefire_0-20240817104105027_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\target\test-classes;C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\target\classes;C:\Users\az885\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.2\junit-jupiter-engine-5.9.2.jar;C:\Users\az885\.m2\repository\org\junit\platform\junit-platform-engine\1.9.2\junit-platform-engine-1.9.2.jar;C:\Users\az885\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\az885\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\az885\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\az885\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\az885\AppData\Local\Temp\surefire15972682785320740557\surefirebooter-20240815193214897_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\az885\AppData\Local\Temp\surefire10026185541289368223\surefirebooter-20240817104105027_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="22.0.2+9-70"/>
@@ -52,7 +52,7 @@
     <property name="user.language.format" value="en"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-22\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk-22\bin;C:\app\az885\product\21c\dbhomeXE\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\az885\AppData\Local\Programs\Python\Python312\;C:\Program Files\PostgreSQL\16\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\xampp\php;C:\Program Files (x86)\nodejs\;C:\Program Files\swipl\bin;C:\Scala\scala3-3.4.2\bin\;C:\Scala\scala3-3.4.2\Ammonite;C:\maven\apache-maven-3.9.8\bin;C:\spark\spark-3.5.1-bin-hadoop3\bin;C:\hadoop\bin;C:\sqlite\bin;%SQLITE_STUDIO_HOME%\bin;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk-22\bin;C:\Users\az885\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\az885\AppData\Local\Programs\Python\Python312\;C:\Users\az885\AppData\Local\Programs\Python\Launcher\;C:\Users\az885\AppData\Local\Microsoft\WindowsApps;C:\Users\az885\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1\bin;;C:\Users\az885\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\az885\.dotnet\tools;C:\Scala\scala3-3.4.2\bin\;C:\Scala\scala3-3.4.2\Ammonite;C:\Users\az885\AppData\Roaming\Composer\vendor\bin;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-22\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk-11\bin;C:\app\az885\product\21c\dbhomeXE\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\az885\AppData\Local\Programs\Python\Python312\;C:\Program Files\PostgreSQL\16\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\xampp\php;C:\Program Files (x86)\nodejs\;C:\Program Files\swipl\bin;C:\Scala\scala3-3.4.2\bin\;C:\Scala\scala3-3.4.2\Ammonite;C:\maven\apache-maven-3.9.8\bin;C:\spark\spark-3.5.1-bin-hadoop3\bin;C:\hadoop\bin;C:\sqlite\bin;C:\sqlite\SQLiteStudio\bin;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk-22\bin;C:\Users\az885\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\az885\AppData\Local\Programs\Python\Python312\;C:\Users\az885\AppData\Local\Programs\Python\Launcher\;C:\Users\az885\AppData\Local\Microsoft\WindowsApps;C:\Users\az885\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1\bin;;C:\Users\az885\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\az885\.dotnet\tools;C:\Scala\scala3-3.4.2\bin\;C:\Scala\scala3-3.4.2\Ammonite;C:\Users\az885\AppData\Roaming\Composer\vendor\bin;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
@@ -60,16 +60,16 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="66.0"/>
   </properties>
-  <testcase name="testDisplayVolar" classname="moscaTest" time="0.0">
-    <system-out><![CDATA[volo sin perder una ala
+  <testcase name="testDisplayVolar" classname="moscaTest" time="0.002">
+    <system-out><![CDATA[Vuela sin perder una ala
 ]]></system-out>
   </testcase>
-  <testcase name="testComer" classname="moscaTest" time="0.001">
+  <testcase name="testComer" classname="moscaTest" time="0.006">
     <system-out><![CDATA[Estoy comiendo hongos
 ]]></system-out>
   </testcase>
-  <testcase name="testDisplayCaminar" classname="moscaTest" time="0.004">
-    <system-out><![CDATA[camino sin perder una pata
+  <testcase name="testDisplayCaminar" classname="moscaTest" time="0.003">
+    <system-out><![CDATA[Camina sin perder una pata
 ]]></system-out>
   </testcase>
 </testsuite>

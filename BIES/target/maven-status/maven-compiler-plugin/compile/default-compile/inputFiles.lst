@@ -4,14 +4,12 @@ C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\
 C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\Alimentacion\miel.java
 C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\BIES.java
 C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\Entidades\Arana.java
-C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\Entidades\Comportamientos\caminar.java
 C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\Entidades\Comportamientos\CaminarDecorador.java
-C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\Entidades\Comportamientos\caminarStrategy.java
 C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\Entidades\Comportamientos\InsectoDecorador.java
-C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\Entidades\Comportamientos\VoladorStrategy.java
-C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\Entidades\Comportamientos\volar.java
 C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\Entidades\Comportamientos\VolarDecorador.java
-C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\Entidades\degradacionMotora.java
+C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\Entidades\degradacionCaminar.java
+C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\Entidades\degradacionStrategy.java
+C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\Entidades\degradacionVolar.java
 C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\Entidades\Insecto.java
 C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\Entidades\Mariposa.java
 C:\Users\az885\Documents\Paradigmas\planetaBies\Planeta-BIES\BIES\src\main\java\com\mycompany\bies\Entidades\Mosca.java
