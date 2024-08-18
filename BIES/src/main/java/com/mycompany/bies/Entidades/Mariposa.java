@@ -1,13 +1,21 @@
 package com.mycompany.bies.Entidades;
 import com.mycompany.bies.Alimentacion.Alimento;
 import com.mycompany.bies.Alimentacion.miel;
-import com.mycompany.bies.Entidades.Comportamientos.InsectoDecorador;
-import com.mycompany.bies.Entidades.Comportamientos.VolarDecorador;
-
+import com.mycompany.bies.Entidades.Comportamientos.Acciones.InsectoDecorador;
+import com.mycompany.bies.Entidades.Comportamientos.Acciones.VolarDecorador;
+/**
+ * Representa una mariposa en el sistema, que es un tipo específico de {@link Insecto}.
+ * Utiliza el patrón Decorador para aplicar la funcionalidad de volar.
+ */
 public class Mariposa implements Insecto {
 
     private InsectoDecorador Decoraciones;
-
+    /**
+     * Crea una instancia de {@link Mariposa}.
+     * Se aplica el decorador {@link VolarDecorador} para proporcionar la funcionalidad de volar.
+     *
+     * @param alas Número de alas de la mariposa.
+     */
     public Mariposa(int alas){
         Decoraciones = new VolarDecorador((serVivo) this, alas);
     }

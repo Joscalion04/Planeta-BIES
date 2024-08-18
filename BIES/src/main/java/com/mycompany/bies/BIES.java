@@ -10,11 +10,18 @@ import com.mycompany.bies.Entidades.Mosca;
 import com.mycompany.bies.Entidades.serVivo;
 
 /**
- *
- * @author jgame
+ * Clase principal del proyecto BIES.
+ * Esta clase contiene el método principal para ejecutar la aplicación.
+ * 
+ * @author Joscalion
  */
 public class BIES {
 
+     /**
+     * Método principal que inicia la aplicación.
+     * 
+     * @param args Argumentos de la línea de comandos.
+     */
     public static void main(String[] args) {
         // Crear insectos básicos
         serVivo mariposa = new Mariposa(2);
