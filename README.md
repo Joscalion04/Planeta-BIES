@@ -22,7 +22,7 @@ Para clonar el repositorio, abre la terminal y navega al directorio donde deseas
 Para hacer testing sobre los cambios realizados, abre la terminal y navega al directorio donde se encuentre el archvi pom.xml. Luego, ejecuta el siguiente comando:
 - " mvn test "
 
-### Javadcos
+### Javadocs
 El repositorio viene configurado para la creacion de documentacion basada en la libreria javadoc, con el siguiente comando maven puedes crear la documentacion:
 - " mvn javadoc:javadoc "
 
