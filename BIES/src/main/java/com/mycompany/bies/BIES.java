@@ -38,7 +38,5 @@ public class BIES {
         System.out.println("\nCaracterísticas de la mosca:");
         mosca.display(1);
         mosca.display(2);
-
-        System.out.println("Prueba 3 para el deploy");
     }
 }
