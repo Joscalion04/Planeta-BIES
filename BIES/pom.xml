@@ -72,33 +72,16 @@
                 <version>3.0.0</version>
                 <executions>
                     <execution>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                        <configuration>
-                            <mainClass>com.mycompany.bies.BIES</mainClass>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>open-javadoc</id>
+                        <id>deploy-script</id>
                         <phase>verify</phase>
                         <goals>
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <executable>${project.basedir}/open-javadoc.bat</executable>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>deploy-git</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>${project.basedir}/deploy.bat</executable>
+                            <executable>cmd</executable>
                             <arguments>
-                                <argument>commitMessage</argument>
+                                <argument>/c</argument>
+                                <argument>${project.basedir}/deploy.bat</argument>
                             </arguments>
                         </configuration>
                     </execution>

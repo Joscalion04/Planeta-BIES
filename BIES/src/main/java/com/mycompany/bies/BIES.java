@@ -39,6 +39,6 @@ public class BIES {
         mosca.display(1);
         mosca.display(2);
 
-        System.out.println("Prueba para el deploy");
+        System.out.println("Prueba 2 para el deploy");
     }
 }
