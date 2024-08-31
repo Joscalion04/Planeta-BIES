@@ -24,19 +24,19 @@ public class VolarDecorador extends InsectoDecorador {
      * Método para realizar la acción de volar.
      * Si el insecto tiene al menos 2 alas, vuela; de lo contrario, no puede volar.
      */
-    public void volar() {
-        if(numAlas >= 2){
+    public boolean volar() {
+        if (numAlas >= 2) {
             System.out.print("Vuela");
-            System.out.println(degradacion.degradar(numAlas));
-        }else{
+            numAlas = degradacion.degradar(numAlas);
+            return true;
+        } else {
             System.out.println("No puedo volar");
+            return false;
         }
     }
 
     @Override
-    public void display(int accion) {
-        volar();
+    public boolean display(int accion) {
+        return volar();
     }
-
-
 }

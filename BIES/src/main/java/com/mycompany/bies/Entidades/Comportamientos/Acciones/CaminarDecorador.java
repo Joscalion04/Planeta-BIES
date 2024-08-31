@@ -21,17 +21,22 @@ public class CaminarDecorador extends InsectoDecorador {
     }
 
     @Override
-    public void display(int accion) {}
+    public boolean display(int accion) {
+        return caminar();
+    }
      /**
      * Método para realizar la acción de caminar.
-     * Si el insecto tiene al menos 2 patas, camina; de lo contrario, no puede caminar.
+     * Si el insecto tiene al menos 2 patas, camina; de lo contrario, no puede caminar
+     * @return true si el insecto puede caminar, false si no puede.
      */
-    public void caminar() {
-        if(numPatas>=2){
+    public boolean caminar() {
+        if (numPatas >= 2) {
             System.out.print("Camina");
-            System.out.println(degradacion.degradar(numPatas));
-        }else{
+            numPatas = degradacion.degradar(numPatas);
+            return true;
+        } else {
             System.out.println("No puedo caminar");
+            return false;
         }
     }
 }

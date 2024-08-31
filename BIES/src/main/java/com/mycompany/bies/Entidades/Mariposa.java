@@ -1,6 +1,7 @@
 package com.mycompany.bies.Entidades;
 import com.mycompany.bies.Alimentacion.Alimento;
 import com.mycompany.bies.Alimentacion.miel;
+import com.mycompany.bies.Alimentacion.carronha;
 import com.mycompany.bies.Entidades.Comportamientos.Acciones.InsectoDecorador;
 import com.mycompany.bies.Entidades.Comportamientos.Acciones.VolarDecorador;
 /**
@@ -8,6 +9,8 @@ import com.mycompany.bies.Entidades.Comportamientos.Acciones.VolarDecorador;
  * Utiliza el patrón Decorador para aplicar la funcionalidad de volar.
  */
 public class Mariposa implements Insecto {
+
+    private boolean vivo;
 
     private InsectoDecorador Decoraciones;
     /**
@@ -17,24 +20,46 @@ public class Mariposa implements Insecto {
      * @param alas Número de alas de la mariposa.
      */
     public Mariposa(int alas){
+        vivo = true;
         Decoraciones = new VolarDecorador((serVivo) this, alas);
     }
 
     @Override
-    public void display(int accion) {
-        if (accion == 1) {
-            Decoraciones.getDecorador(VolarDecorador.class).volar();;
+    public boolean display(int accion) {
+        try{
+            if (!vivo) {
+                System.out.println("La mariposa no puede volar porque está muerta");
+                return false;
+            }
+            if (accion == 1) {
+                if(!Decoraciones.getDecorador(VolarDecorador.class).volar()){
+                    morir();
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Ocurrió un error al ejecutar la acción: " + e.getMessage());
         }
+        return true;
     }
 
     @Override
-    public void comer(Alimento comida) {
-        if(comida instanceof miel){
-            System.out.println("Estoy comiendo hongos");
-        }else{
-            System.out.println("No puedo, no son hongos");
+    public boolean comer(Alimento comida) {
+        if (!vivo) {
+            System.out.println("La mariposa no puede comer porque está muerta");
+            return false;
         }
+        if(comida instanceof miel){
+            System.out.println("Estoy comiendo miel");
+        }else{
+            System.out.println("No puedo, no es miel");
+        }
+        return true;
     }
 
-
+    @Override
+    public carronha morir() {
+        System.out.println("La mariposa ha muerto y se ha convertido en carroña");
+        vivo = false;
+        return new carronha(this);
+    }
 }

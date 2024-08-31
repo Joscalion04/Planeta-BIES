@@ -10,6 +10,10 @@ import com.mycompany.bies.Entidades.Comportamientos.Acciones.VolarDecorador;
  * Utiliza los patrones Decorador para aplicar las funcionalidades de caminar y volar.
  */
 public class Mosca implements Insecto {
+
+    private boolean vivo;
+    private boolean volar;
+    private boolean caminar;
     
     private InsectoDecorador Decoraciones;
     /**
@@ -21,19 +25,46 @@ public class Mosca implements Insecto {
      * @param alas Número de alas de la mosca.
      */
     public Mosca(int patas, int alas){
+        vivo = true;
+        volar = true;
+        caminar = true;
         Insecto baseInsecto = this;
         Decoraciones = new VolarDecorador(new CaminarDecorador((serVivo) baseInsecto, patas), alas);
     }
 
     @Override
-    public void display(int accion) {
+    public boolean display(int accion) {
+        if (!vivo) {
+            System.out.println("La mosca no puede volar ni caminar porque está muerta");
+            return false;
+        }
         try {
             switch (accion) {
                 case 1:
-                    Decoraciones.getDecorador(VolarDecorador.class).volar();
+                    if (volar) {
+                        if (!Decoraciones.getDecorador(VolarDecorador.class).volar()) {
+                            volar = false;
+                            verificarEstado();
+                            return false;
+                        }
+                    } else {
+                        System.out.println("No puedo volar");
+                        verificarEstado();
+                        return false;
+                    }
                     break;
                 case 2:
-                    Decoraciones.getDecorador(CaminarDecorador.class).caminar();;
+                    if (caminar) {
+                        if (!Decoraciones.getDecorador(CaminarDecorador.class).caminar()) {
+                            caminar = false;
+                            verificarEstado();
+                            return false;
+                        }
+                    } else {
+                        System.out.println("No puedo caminar");
+                        verificarEstado();
+                        return false;
+                    }
                     break;
                 default:
                     System.out.println("Estoy Inmovil");
@@ -42,14 +73,50 @@ public class Mosca implements Insecto {
         } catch (Exception e) {
             System.out.println("Ocurrió un error al ejecutar la acción: " + e.getMessage());
         }
+        return true;
+    }
+    
+    private void verificarEstado() {
+        if (!volar && !caminar) {
+            morir();
+        }
     }
 
     @Override
-    public void comer(Alimento comida) {
-        if(comida instanceof carronha){
-            System.out.println("Estoy comiendo hongos");
-        }else{
-            System.out.println("No puedo, no son hongos");
+    public boolean comer(Alimento comida) {
+        if (!vivo) {
+            System.out.println("La mosca no puede comer porque está muerta");
+            return false;
         }
+        if (comida instanceof carronha) {
+            carronha carroña = (carronha) comida;
+            if (carroña.esComestiblePor(this)) {
+                System.out.println("Estoy comiendo carroña");
+                return true;
+            } else {
+                System.out.println("No puedo comer esto");
+                return false;
+            }
+        } else {
+            System.out.println("No puedo, no es carroña");
+            return false;
+        }
+    }
+
+    public boolean comer(Insecto insecto) {
+        if (!vivo) {
+            System.out.println("La mosca no puede comer porque está muerta");
+            return false;
+        }
+        System.out.println("El insecto huyó");
+        return false;
+    }
+    
+
+    @Override
+    public carronha morir() {
+        System.out.println("La mosca ha muerto y se ha convertido en carroña");
+        vivo = false;
+        return new carronha(this);
     }
 }

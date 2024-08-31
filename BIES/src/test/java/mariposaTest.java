@@ -1,3 +1,4 @@
+import com.mycompany.bies.Alimentacion.hongo;
 import com.mycompany.bies.Alimentacion.miel;
 import com.mycompany.bies.Entidades.Mariposa;
 
@@ -14,14 +15,35 @@ public class mariposaTest {
     }
 
     @Test
-    public void testDisplay() {
-        // Simula la acción de volar
+    public void testDisplayVolar() {
+        System.out.println("=========================\nTest de volar\n");
         mariposa.display(1);
+        System.out.println("\nFin test de volar\n=========================");
     }
 
     @Test
-    public void testComer() {
+    public void testComerMiel() {
+        System.out.println("=========================\nTest de comer\n");
         miel comida = new miel();
         mariposa.comer(comida);
+        System.out.println("\nFin test de comer\n=========================");
+    }
+
+    @Test
+    public void testComerNoMiel() {
+        System.out.println("=========================\nTest de comer algo que no es miel\n");
+        mariposa.comer(new hongo());
+        System.out.println("\nFin test de comer\n=========================");
+    }
+
+    @Test
+    public void testMorir() {
+        System.out.println("=========================\nTest de morir\n");
+        boolean continuar = true;
+        while (continuar) {
+            // Simula la acción de volar
+            continuar = mariposa.display(1);
+        }
+        System.out.println("\nFin test de morir\n=========================");
     }
 }

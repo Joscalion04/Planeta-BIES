@@ -17,7 +17,8 @@ public abstract class InsectoDecorador implements serVivo {
     }
 
     @Override
-    public void display(int accion) {
+    public boolean display(int accion) {
+        return decoratedInsecto.display(accion);
     }
     
     /**

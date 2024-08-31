@@ -5,9 +5,9 @@ package com.mycompany.bies.Entidades;
  */
 public interface serVivo {
     /**
-     * Muestra una representación del ser vivo basado en una acción dada.
+     * Muestra una representación del ser vivo basado en una acción dada.`
      *
      * @param accion Un entero que representa la acción a realizar.
      */
-    void display(int accion);
+    boolean display(int accion);
 }

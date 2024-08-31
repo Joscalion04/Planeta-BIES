@@ -11,15 +11,18 @@ public class degradacionCaminar implements degradacionStrategy{
      * @return Una cadena que describe el resultado de la degradación.
      */
    @Override
-    public String degradar(int numPatas){
+    public int degradar(int numPatas){
         Random random = new Random();
 
         int numeroAleatorio = random.nextInt(4); 
         int probabilidad = 1 / numPatas;
         if(numeroAleatorio == probabilidad){
-            return " pero perdio una pata";
+            numPatas--;
+            System.out.println(" pero perdio una pata, tiene " + numPatas + " patas restantes");
+            return numPatas;
         }
-        return " sin perder una pata";
+        System.out.println(" sin perder una pata");
+        return numPatas;
     }     
     
 }

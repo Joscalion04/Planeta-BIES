@@ -7,7 +7,7 @@ public interface degradacionStrategy{
      * Degrada el estado del insecto basado en el número de extremidades.
      * 
      * @param numExtremidades El número de extremidades del insecto.
-     * @return Una cadena que describe el resultado de la degradación.
+     * @return El numero de extremidades que le quedan al insecto
      */
-    public String degradar(int numExtremidades);    
+    public int degradar(int numExtremidades);    
 }

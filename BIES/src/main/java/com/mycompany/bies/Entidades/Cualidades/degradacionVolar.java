@@ -11,14 +11,17 @@ public class degradacionVolar implements degradacionStrategy{
      * @return Una cadena que describe el resultado de la degradación.
      */
     @Override
-    public String degradar(int numAlas){
+    public int degradar(int numAlas){
         Random random = new Random();
 
         int numeroAleatorio = random.nextInt(3); 
         int probabilidad = 1 / numAlas;
         if(numeroAleatorio == probabilidad){
-            return " pero perdio una ala";
+            numAlas--;
+            System.out.println(" pero perdio una ala, tiene " + numAlas + " alas restantes");
+            return numAlas;
         }
-        return " sin perder una ala";
+        System.out.println(" sin perder una ala");
+        return numAlas;
     } 
 }
