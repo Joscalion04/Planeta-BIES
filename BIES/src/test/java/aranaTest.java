@@ -1,5 +1,5 @@
-import com.mycompany.bies.Alimentacion.hongo;
-import com.mycompany.bies.Alimentacion.miel;
+import com.mycompany.bies.Alimentacion.Hongo;
+import com.mycompany.bies.Alimentacion.Miel;
 import com.mycompany.bies.Entidades.Arana;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -24,7 +24,7 @@ public class aranaTest {
     @Test
     public void testComerHongo() {
         System.out.println("=========================\nTest de comer hongo\n");
-        hongo comida = new hongo();
+        Hongo comida = new Hongo();
         arana.comer(comida);
         System.out.println("\nFin test de comer\n=========================");
     }
@@ -32,7 +32,7 @@ public class aranaTest {
     @Test
     public void testComerNoHongo() {
         System.out.println("=========================\nTest de comer algo que no es hongo\n");
-        arana.comer(new miel());
+        arana.comer(new Miel());
         System.out.println("\nFin test de comer\n=========================");
     }
 

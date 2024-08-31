@@ -1,5 +1,5 @@
-import com.mycompany.bies.Alimentacion.hongo;
-import com.mycompany.bies.Alimentacion.miel;
+import com.mycompany.bies.Alimentacion.Hongo;
+import com.mycompany.bies.Alimentacion.Miel;
 import com.mycompany.bies.Entidades.Mariposa;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -24,7 +24,7 @@ public class mariposaTest {
     @Test
     public void testComerMiel() {
         System.out.println("=========================\nTest de comer\n");
-        miel comida = new miel();
+        Miel comida = new Miel();
         mariposa.comer(comida);
         System.out.println("\nFin test de comer\n=========================");
     }
@@ -32,7 +32,7 @@ public class mariposaTest {
     @Test
     public void testComerNoMiel() {
         System.out.println("=========================\nTest de comer algo que no es miel\n");
-        mariposa.comer(new hongo());
+        mariposa.comer(new Hongo());
         System.out.println("\nFin test de comer\n=========================");
     }
 

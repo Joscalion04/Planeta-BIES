@@ -1,7 +1,7 @@
 package com.mycompany.bies.Entidades;
 
 import com.mycompany.bies.Alimentacion.Alimento;
-import com.mycompany.bies.Alimentacion.carronha;
+import com.mycompany.bies.Alimentacion.Carronha;
 /**
  * Interfaz que representa un insecto en el sistema.
  * Los insectos deben implementar esta interfaz y proporcionar
@@ -28,5 +28,5 @@ public interface Insecto extends serVivo {
      * 
      * @return El objeto carronha que representa la muerte del insecto.
     */
-    public carronha morir();
+    public Carronha morir();
 }

@@ -1,16 +1,16 @@
 package com.mycompany.bies.Entidades.Cualidades;
 import java.util.Random;
 /**
- * Implementación de {@link degradacionStrategy} para manejar la degradación al caminar.
+ * Implementación de {@link DegradacionStrategy} para manejar la degradación al caminar.
  */
-public class degradacionCaminar implements degradacionStrategy{
+public class DegradacionCaminar implements DegradacionStrategy{
     /**
      * Degrada el estado del insecto al caminar, basado en el número de patas.
      * 
      * @param numPatas El número de patas del insecto.
      * @return Una cadena que describe el resultado de la degradación.
      */
-   @Override
+    @Override
     public int degradar(int numPatas){
         Random random = new Random();
 

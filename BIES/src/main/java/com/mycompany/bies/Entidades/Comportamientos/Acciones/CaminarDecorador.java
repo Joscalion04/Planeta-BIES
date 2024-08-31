@@ -1,13 +1,13 @@
 package com.mycompany.bies.Entidades.Comportamientos.Acciones;
 import com.mycompany.bies.Entidades.serVivo;
-import com.mycompany.bies.Entidades.Cualidades.degradacionCaminar;
-import com.mycompany.bies.Entidades.Cualidades.degradacionStrategy;
+import com.mycompany.bies.Entidades.Cualidades.DegradacionCaminar;
+import com.mycompany.bies.Entidades.Cualidades.DegradacionStrategy;
 /**
  * Decorador que permite al insecto caminar, agregando la funcionalidad de caminar al insecto decorado.
  */
 public class CaminarDecorador extends InsectoDecorador {
     private int numPatas;
-    private degradacionStrategy degradacion = new degradacionCaminar();
+    private DegradacionStrategy degradacion = new DegradacionCaminar();
 
     /**
      * Crea un decorador que agrega la capacidad de caminar al insecto decorado.

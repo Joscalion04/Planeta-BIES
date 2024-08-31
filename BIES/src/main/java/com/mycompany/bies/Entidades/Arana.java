@@ -1,7 +1,7 @@
 package com.mycompany.bies.Entidades;
 import com.mycompany.bies.Alimentacion.Alimento;
-import com.mycompany.bies.Alimentacion.hongo;
-import com.mycompany.bies.Alimentacion.carronha;
+import com.mycompany.bies.Alimentacion.Hongo;
+import com.mycompany.bies.Alimentacion.Carronha;
 import com.mycompany.bies.Entidades.Comportamientos.Acciones.CaminarDecorador;
 import com.mycompany.bies.Entidades.Comportamientos.Acciones.InsectoDecorador;
 /**
@@ -49,7 +49,7 @@ public class Arana implements Insecto {
             System.out.println("La araña no puede comer porque está muerta");
             return false;
         }
-        if(comida instanceof hongo){
+        if(comida instanceof Hongo){
             System.out.println("Estoy comiendo hongos");
         }else{
             System.out.println("No puedo, no son hongos");
@@ -58,9 +58,9 @@ public class Arana implements Insecto {
     }
 
     @Override
-    public carronha morir() {
+    public Carronha morir() {
         System.out.println("La araña ha muerto y se ha convertido en carroña");
         vivo = false;
-        return new carronha(this);
+        return new Carronha(this);
     }
 }

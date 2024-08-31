@@ -1,7 +1,7 @@
 package com.mycompany.bies.Entidades;
 import com.mycompany.bies.Alimentacion.Alimento;
-import com.mycompany.bies.Alimentacion.miel;
-import com.mycompany.bies.Alimentacion.carronha;
+import com.mycompany.bies.Alimentacion.Miel;
+import com.mycompany.bies.Alimentacion.Carronha;
 import com.mycompany.bies.Entidades.Comportamientos.Acciones.InsectoDecorador;
 import com.mycompany.bies.Entidades.Comportamientos.Acciones.VolarDecorador;
 /**
@@ -48,7 +48,7 @@ public class Mariposa implements Insecto {
             System.out.println("La mariposa no puede comer porque está muerta");
             return false;
         }
-        if(comida instanceof miel){
+        if(comida instanceof Miel){
             System.out.println("Estoy comiendo miel");
         }else{
             System.out.println("No puedo, no es miel");
@@ -57,9 +57,9 @@ public class Mariposa implements Insecto {
     }
 
     @Override
-    public carronha morir() {
+    public Carronha morir() {
         System.out.println("La mariposa ha muerto y se ha convertido en carroña");
         vivo = false;
-        return new carronha(this);
+        return new Carronha(this);
     }
 }

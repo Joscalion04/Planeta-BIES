@@ -1,7 +1,7 @@
 package com.mycompany.bies.Entidades;
 
 import com.mycompany.bies.Alimentacion.Alimento;
-import com.mycompany.bies.Alimentacion.carronha;
+import com.mycompany.bies.Alimentacion.Carronha;
 import com.mycompany.bies.Entidades.Comportamientos.Acciones.CaminarDecorador;
 import com.mycompany.bies.Entidades.Comportamientos.Acciones.InsectoDecorador;
 import com.mycompany.bies.Entidades.Comportamientos.Acciones.VolarDecorador;
@@ -88,8 +88,8 @@ public class Mosca implements Insecto {
             System.out.println("La mosca no puede comer porque está muerta");
             return false;
         }
-        if (comida instanceof carronha) {
-            carronha carroña = (carronha) comida;
+        if (comida instanceof Carronha) {
+            Carronha carroña = (Carronha) comida;
             if (carroña.esComestiblePor(this)) {
                 System.out.println("Estoy comiendo carroña");
                 return true;
@@ -114,9 +114,9 @@ public class Mosca implements Insecto {
     
 
     @Override
-    public carronha morir() {
+    public Carronha morir() {
         System.out.println("La mosca ha muerto y se ha convertido en carroña");
         vivo = false;
-        return new carronha(this);
+        return new Carronha(this);
     }
 }

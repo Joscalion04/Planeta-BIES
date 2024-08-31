@@ -1,6 +1,6 @@
 import com.mycompany.bies.Alimentacion.Alimento;
-import com.mycompany.bies.Alimentacion.carronha;
-import com.mycompany.bies.Alimentacion.miel;
+import com.mycompany.bies.Alimentacion.Carronha;
+import com.mycompany.bies.Alimentacion.Miel;
 import com.mycompany.bies.Entidades.Mariposa;
 import com.mycompany.bies.Entidades.Mosca;
 
@@ -50,11 +50,11 @@ public class moscaTest {
 
     @Test
     public void testComerInsectoMuerto() {
-        System.out.println("=========================\nTest de comer insecto muerto\n");
+        System.out.println("=========================\nTest de comer insecto muerto (Carronha)\n");
 
         System.out.println("\nSe crea una mariposa y se hace que muera\n");
         Mariposa mariposa = new Mariposa(2);
-        carronha carroñaMariposa = mariposa.morir();  // Se fuerza la muerte de la mariposa
+        Carronha carroñaMariposa = mariposa.morir();  // Se fuerza la muerte de la mariposa
         carroñaMariposa.sePresenta();
 
         System.out.println("\nLa mosca intenta comer la mariposa muerta\n");
@@ -81,7 +81,7 @@ public class moscaTest {
     @Test
     public void testComerNoCarronha() {
         System.out.println("=========================\nTest de comer algo que no es carroña\n");
-        mosca.comer(new miel());
+        mosca.comer(new Miel());
         System.out.println("\nFin test de comer algo que no es carroña\n=========================");
     }
 

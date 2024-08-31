@@ -6,10 +6,10 @@ import com.mycompany.bies.Entidades.SerNoVivo;
 /**
  * Implementación de {@link Alimento} que representa un tipo específico de alimento, 'carronha'.
  */
-public class carronha extends SerNoVivo implements Alimento {
+public class Carronha extends SerNoVivo implements Alimento {
     private Insecto insectoOriginal;
 
-    public carronha(Insecto insectoOriginal) {
+    public Carronha(Insecto insectoOriginal) {
         this.insectoOriginal = insectoOriginal;
     }
 

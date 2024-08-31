@@ -1,9 +1,9 @@
 package com.mycompany.bies.Entidades.Cualidades;
 import java.util.Random;
 /**
- * Implementación de {@link degradacionStrategy} para manejar la degradación al volar.
+ * Implementación de {@link DegradacionStrategy} para manejar la degradación al volar.
  */
-public class degradacionVolar implements degradacionStrategy{
+public class DegradacionVolar implements DegradacionStrategy{
     /**
      * Degrada el estado del insecto al volar, basado en el número de alas.
      * 
