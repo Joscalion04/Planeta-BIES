@@ -19,6 +19,13 @@ echo No hay cambios para commit.
 goto :end
 
 :foundChanges
+:: Preguntar al usuario si desea hacer commit y push
+set /p confirm="Deseas hacer commit y push al repositorio? (y/n): "
+if /i "%confirm%" neq "y" (
+    echo Cancelado por el usuario.
+    goto :end
+)
+
 :: Solicitar mensaje de commit
 set /p commitMessage=Introduce el mensaje de commit: 
 
