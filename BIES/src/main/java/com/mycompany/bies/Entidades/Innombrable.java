@@ -6,7 +6,7 @@ import com.mycompany.bies.Entidades.Comportamientos.Acciones.CaminarDecorador;
 import com.mycompany.bies.Entidades.Comportamientos.Acciones.InsectoDecorador;
 import com.mycompany.bies.Entidades.Comportamientos.Acciones.VolarDecorador;
 /**
-     * Crea una instancia de {@link Innombrable}.
+     * * Representa un ser llamado 'Innombrable' que puede caminar y volar.
      * Se aplican los decoradores {@link CaminarDecorador} y {@link VolarDecorador}
      * para proporcionar las funcionalidades de caminar y volar.
      
@@ -122,7 +122,7 @@ public class Innombrable implements Insecto {
      *
      * @return Una instancia de {@link Carronha} que representa al innombrable muerto.
      */
-    @Override
+   
     @Override
     public Carronha morir() {
         System.out.println("El ente ha muerto y se ha convertido en carroña");
