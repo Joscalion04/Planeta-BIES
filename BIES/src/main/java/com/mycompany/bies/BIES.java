@@ -7,6 +7,7 @@ package com.mycompany.bies;
 import com.mycompany.bies.Entidades.Arana;
 import com.mycompany.bies.Entidades.Mariposa;
 import com.mycompany.bies.Entidades.Mosca;
+
 import com.mycompany.bies.Entidades.serVivo;
 
 /**
