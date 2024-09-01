@@ -24,7 +24,13 @@ public class Arana implements Insecto {
         vivo = true;
         Decoraciones = new CaminarDecorador((serVivo) this, patas);
     }
-
+/**
+     * Realiza una acción basada en el valor proporcionado.
+     *
+     * @param accion El código de la acción a realizar.
+     *               Por ejemplo, 1 representa la acción de caminar.
+     * @return {@code true} si la acción se ejecutó correctamente; de lo contrario, {@code false}.
+     */
     @Override
     public boolean display(int accion) {
         try{
@@ -42,7 +48,12 @@ public class Arana implements Insecto {
         }
         return true;
     }
-
+  /**
+     * Permite a la araña comer un alimento.
+     *
+     * @param comida El {@link Alimento} que la araña intenta comer.
+     * @return {@code true} si la araña puede comer el alimento; de lo contrario, {@code false}.
+     */
     @Override
     public boolean comer(Alimento comida) {
         if (!vivo) {
@@ -56,7 +67,11 @@ public class Arana implements Insecto {
         }
         return true;
     }
-
+/**
+     * Cambia el estado de la araña a muerta y la convierte en carroña.
+     *
+     * @return Una instancia de {@link Carronha} que representa la araña muerta.
+     */
     @Override
     public Carronha morir() {
         System.out.println("La araña ha muerto y se ha convertido en carroña");

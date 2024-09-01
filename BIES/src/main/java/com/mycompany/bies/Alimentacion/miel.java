@@ -1,6 +1,7 @@
 package com.mycompany.bies.Alimentacion;
 /**
- * Implementación de {@link Alimento} que representa un tipo específico de alimento, 'miel'.
+ * Representa un tipo específico de alimento, 'miel'.
+ * Implementación de {@link Alimento}.
  */
 public record Miel() implements Alimento{
 

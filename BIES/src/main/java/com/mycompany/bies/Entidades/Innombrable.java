@@ -5,6 +5,12 @@ import com.mycompany.bies.Alimentacion.Carronha;
 import com.mycompany.bies.Entidades.Comportamientos.Acciones.CaminarDecorador;
 import com.mycompany.bies.Entidades.Comportamientos.Acciones.InsectoDecorador;
 import com.mycompany.bies.Entidades.Comportamientos.Acciones.VolarDecorador;
+/**
+     * Crea una instancia de {@link Innombrable}.
+     * Se aplican los decoradores {@link CaminarDecorador} y {@link VolarDecorador}
+     * para proporcionar las funcionalidades de caminar y volar.
+     
+     */
 
 public class Innombrable implements Insecto {
      private boolean vivo;
@@ -13,10 +19,7 @@ public class Innombrable implements Insecto {
     
     private InsectoDecorador Decoraciones;
     /**
-     * Crea una instancia de {@link Innombrable}.
-     * Se aplican los decoradores {@link CaminarDecorador} y {@link VolarDecorador}
-     * para proporcionar las funcionalidades de caminar y volar.
-     *
+     
      * @param patas Número de patas del innombrable.
      * @param alas Número de alas del innombrable.
      */
@@ -27,7 +30,13 @@ public class Innombrable implements Insecto {
         Insecto baseInsecto = this;
         Decoraciones = new VolarDecorador(new CaminarDecorador((serVivo) baseInsecto, patas), alas);
     }
-
+ /**
+     * Realiza una acción basada en el valor proporcionado.
+     *
+     * @param accion El código de la acción a realizar:
+     *               1 representa la acción de volar, 2 representa la acción de caminar.
+     * @return {@code true} si la acción se ejecutó correctamente; de lo contrario, {@code false}.
+     */
     @Override
     public boolean display(int accion) {
         if (!vivo) {
@@ -71,13 +80,20 @@ public class Innombrable implements Insecto {
         }
         return true;
     }
-    
+     /**
+     * Verifica el estado del innombrable. Si no puede volar ni caminar, cambia su estado a muerto.
+     */
     private void verificarEstado() {
         if (!volar && !caminar) {
             morir();
         }
     }
-
+/**
+     * Permite al innombrable comer un alimento.
+     *
+     * @param comida El {@link Alimento} que el innombrable intenta comer.
+     * @return {@code true} si el innombrable puede comer el alimento; de lo contrario, {@code false}.
+     */
     @Override
     public boolean comer(Alimento comida) {
         if (!vivo) {
@@ -87,7 +103,12 @@ public class Innombrable implements Insecto {
         System.out.println("El ente está comiendo");
         return true;
     }
-
+/**
+     * Permite al innombrable comer otro insecto.
+     *
+     * @param insecto El {@link Insecto} que el innombrable intenta comer.
+     * @return {@code true} si el innombrable puede comer el insecto; de lo contrario, {@code false}.
+     */
     public boolean comer(Insecto insecto) {
         if (!vivo) {
             System.out.println("El ente no puede comer porque está muerto");
@@ -96,7 +117,12 @@ public class Innombrable implements Insecto {
         System.out.println("El ente está comiendo");
         return true;
     }
-    
+     /**
+     * Cambia el estado del innombrable a muerto y lo convierte en carroña.
+     *
+     * @return Una instancia de {@link Carronha} que representa al innombrable muerto.
+     */
+    @Override
     @Override
     public Carronha morir() {
         System.out.println("El ente ha muerto y se ha convertido en carroña");

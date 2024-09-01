@@ -1,8 +1,10 @@
 package com.mycompany.bies.Alimentacion;
+
 /**
- * Implementación de {@link Alimento} que representa un tipo específico de alimento, 'hongo'.
+ * Representa un tipo específico de alimento, 'hongo'.
+ * Implementa la interfaz {@link Alimento}.
  */
-public record Hongo() implements Alimento{
+public record Hongo() implements Alimento {
 
     /**
      * Muestra una presentación del alimento 'hongo'.
@@ -11,5 +13,4 @@ public record Hongo() implements Alimento{
     public void sePresenta() {
         System.out.println("Soy hongo");
     }
-
 }
