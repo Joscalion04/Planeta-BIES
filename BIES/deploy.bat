@@ -15,7 +15,6 @@ if %ERRORLEVEL% neq 0 (
     echo  Error al verificar el estado del repositorio.
     echo.
     echo ===========================================================
-    echo.
     exit /b 1
 )
 
@@ -30,7 +29,6 @@ echo.
 echo  No hay cambios para commit.
 echo.
 echo ===========================================================
-echo.
 goto :end
 
 :foundChanges
@@ -48,7 +46,6 @@ if /i "%confirm%" neq "y" (
     echo  Cancelado por el usuario.
     echo.
     echo ===========================================================
-    echo.
     goto :end
 )
 
@@ -56,9 +53,6 @@ if /i "%confirm%" neq "y" (
 :askCommitMessage
 echo.
 echo  Introduce el mensaje de commit:
-echo.
-echo ===========================================================
-echo.
 set /p commitMessage=
 
 if "%commitMessage%"=="" (
@@ -71,7 +65,6 @@ echo.
 echo  Agregando cambios...
 echo.
 echo ===========================================================
-echo.
 
 git add .
 if %ERRORLEVEL% neq 0 (
@@ -88,7 +81,6 @@ echo.
 echo  Realizando commit...
 echo.
 echo ===========================================================
-echo.
 
 git commit -m "%commitMessage%"
 if %ERRORLEVEL% neq 0 (
@@ -105,7 +97,6 @@ echo.
 echo  Haciendo push al repositorio...
 echo.
 echo ===========================================================
-echo.
 
 git push origin main
 if %ERRORLEVEL% neq 0 (
@@ -118,10 +109,9 @@ if %ERRORLEVEL% neq 0 (
 )
 
 echo.
-echo  ¡Operación completada exitosamente!
+echo  Operacion completada exitosamente
 echo.
 echo ===========================================================
-echo.
 
 :end
 :: Fin del script
