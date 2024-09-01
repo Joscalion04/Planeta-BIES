@@ -31,7 +31,13 @@ public class Mosca implements Insecto {
         Insecto baseInsecto = this;
         Decoraciones = new VolarDecorador(new CaminarDecorador((serVivo) baseInsecto, patas), alas);
     }
-
+ /**
+     * Realiza una acción basada en el valor proporcionado.
+     *
+     * @param accion El código de la acción a realizar:
+     *               1 representa la acción de volar, 2 representa la acción de caminar.
+     * @return {@code true} si la acción se ejecutó correctamente; de lo contrario, {@code false}.
+     */
     @Override
     public boolean display(int accion) {
         if (!vivo) {
@@ -75,13 +81,20 @@ public class Mosca implements Insecto {
         }
         return true;
     }
-    
+     /**
+     * Verifica el estado de la mosca y la mata si no puede volar ni caminar.
+     */
     private void verificarEstado() {
         if (!volar && !caminar) {
             morir();
         }
     }
-
+/**
+     * Permite a la mosca comer un alimento.
+     *
+     * @param comida El {@link Alimento} que la mosca intenta comer.
+     * @return {@code true} si la araña puede comer el alimento; de lo contrario, {@code false}.
+     */
     @Override
     public boolean comer(Alimento comida) {
         if (!vivo) {
@@ -102,6 +115,12 @@ public class Mosca implements Insecto {
             return false;
         }
     }
+/**
+     * Permite a la mosca comer un {@link Insecto} muerto.
+     *
+     * @param insecto El {@link Insecto} que la mosca intenta comer.
+     * @return {@code true} si la mosca puede comer el insecto; de lo contrario, {@code false}.
+     */
 
     public boolean comer(Insecto insecto) {
         if (!vivo) {
@@ -113,6 +132,11 @@ public class Mosca implements Insecto {
     }
     
 
+    /**
+     * Cambia el estado de la mosca a muerto y la convierte en carroña.
+     *
+     * @return Una instancia de {@link Carronha} que representa a la mosca muerta.
+     */
     @Override
     public Carronha morir() {
         System.out.println("La mosca ha muerto y se ha convertido en carroña");

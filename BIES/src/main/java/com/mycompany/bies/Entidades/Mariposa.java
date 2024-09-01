@@ -23,7 +23,13 @@ public class Mariposa implements Insecto {
         vivo = true;
         Decoraciones = new VolarDecorador((serVivo) this, alas);
     }
-
+  /**
+     * Ejecuta una acción basada en el valor proporcionado.
+     * Si la acción es volar, la mariposa intentará volar; de lo contrario, permanecerá inactiva.
+     *
+     * @param accion El código de la acción a realizar (1 para volar).
+     * @return {@code true} si la acción se ejecutó correctamente; de lo contrario, {@code false}.
+     */
     @Override
     public boolean display(int accion) {
         try{
@@ -41,7 +47,13 @@ public class Mariposa implements Insecto {
         }
         return true;
     }
-
+ /**
+     * Permite a la mariposa comer un alimento específico.
+     * La mariposa solo puede comer miel.
+     *
+     * @param comida El {@link Alimento} que la mariposa intenta comer.
+     * @return {@code true} si la mariposa puede comer el alimento; de lo contrario, {@code false}.
+     */
     @Override
     public boolean comer(Alimento comida) {
         if (!vivo) {
@@ -56,6 +68,11 @@ public class Mariposa implements Insecto {
         return true;
     }
 
+    /**
+     * Cambia el estado de la mariposa a muerto y la convierte en carroña.
+     *
+     * @return Una instancia de {@link Carronha} que representa a la mariposa muerta.
+     */
     @Override
     public Carronha morir() {
         System.out.println("La mariposa ha muerto y se ha convertido en carroña");
