@@ -3,7 +3,7 @@ import com.mycompany.bies.Entidades.serVivo;
 import com.mycompany.bies.Entidades.Cualidades.DegradacionStrategy;
 import com.mycompany.bies.Entidades.Cualidades.DegradacionVolar;
 /**
- * Decorador que permite al insecto volar, agregando la funcionalidad de volar al insecto decorado.
+ * {@link InsectoDecorador}  que permite al insecto volar, agregando la funcionalidad de volar al insecto decorado.
  */
 public class VolarDecorador extends InsectoDecorador {
     private int numAlas;
@@ -20,9 +20,11 @@ public class VolarDecorador extends InsectoDecorador {
         this.numAlas = numAlas;
     }
 
-    /**
-     * Método para realizar la acción de volar.
+     /**
+     * Realiza la acción de volar.
      * Si el insecto tiene al menos 2 alas, vuela; de lo contrario, no puede volar.
+     *
+     * @return {@code true} si el insecto puede volar; {@code false} en caso contrario.
      */
     public boolean volar() {
         if (numAlas >= 2) {
@@ -34,7 +36,12 @@ public class VolarDecorador extends InsectoDecorador {
             return false;
         }
     }
-
+  /**
+     * Realiza una acción basada en el valor proporcionado.
+     *
+     * @param accion El código de la acción a realizar. En este caso, se utiliza para volar.
+     * @return {@code true} si la acción se ejecutó correctamente; de lo contrario, {@code false}.
+     */
     @Override
     public boolean display(int accion) {
         return volar();

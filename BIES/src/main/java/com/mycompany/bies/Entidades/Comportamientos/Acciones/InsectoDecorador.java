@@ -15,7 +15,13 @@ public abstract class InsectoDecorador implements serVivo {
     public InsectoDecorador(serVivo decoratedInsecto) {
         this.decoratedInsecto = decoratedInsecto;
     }
-
+/**
+ * Realiza una acción en el insecto decorado basado en el código de acción proporcionado.
+ * Este método delega la llamada al método `display` del insecto decorado.
+ *
+ * @param accion El código de la acción a realizar. La interpretación del código depende de la implementación del insecto decorado.
+ * @return {@code true} si la acción se ejecutó correctamente en el insecto decorado; de lo contrario, {@code false}.
+ */
     @Override
     public boolean display(int accion) {
         return decoratedInsecto.display(accion);

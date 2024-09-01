@@ -3,7 +3,7 @@ import com.mycompany.bies.Entidades.serVivo;
 import com.mycompany.bies.Entidades.Cualidades.DegradacionCaminar;
 import com.mycompany.bies.Entidades.Cualidades.DegradacionStrategy;
 /**
- * Decorador que permite al insecto caminar, agregando la funcionalidad de caminar al insecto decorado.
+ * {@link InsectoDecorador}   que permite al insecto caminar, agregando la funcionalidad de caminar al insecto decorado.
  */
 public class CaminarDecorador extends InsectoDecorador {
     private int numPatas;
@@ -19,13 +19,18 @@ public class CaminarDecorador extends InsectoDecorador {
         super(decoratedInsecto);
         this.numPatas = numPatas;
     }
-
+/**
+     * Realiza una acción basada en el valor proporcionado.
+     *
+     * @param accion El código de la acción a realizar. En este caso, se utiliza para caminar.
+     * @return {@code true} si la acción se ejecutó correctamente; de lo contrario, {@code false}.
+     */
     @Override
     public boolean display(int accion) {
         return caminar();
     }
      /**
-     * Método para realizar la acción de caminar.
+     *Realiza la acción de caminar.
      * Si el insecto tiene al menos 2 patas, camina; de lo contrario, no puede caminar
      * @return true si el insecto puede caminar, false si no puede.
      */
