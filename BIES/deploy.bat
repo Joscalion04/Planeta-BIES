@@ -39,9 +39,11 @@ echo  Se encontraron cambios.
 echo.
 echo ===========================================================
 echo.
+
 :: Preguntar al usuario si desea hacer commit y push
 set /p confirm="Deseas hacer commit y push al repositorio? (y/n): "
-if /i "!confirm!" neq "y" (
+if /i "%confirm%" neq "y" (
+    echo ===========================================================
     echo.
     echo  Cancelado por el usuario.
     echo.
@@ -51,6 +53,7 @@ if /i "!confirm!" neq "y" (
 )
 
 :: Solicitar mensaje de commit
+:askCommitMessage
 echo.
 echo  Introduce el mensaje de commit:
 echo.
@@ -58,9 +61,9 @@ echo ===========================================================
 echo.
 set /p commitMessage=
 
-while not defined commitMessage (
+if "%commitMessage%"=="" (
     echo El mensaje de commit no puede estar vacío.
-    set /p commitMessage=Introduce el mensaje de commit: 
+    goto :askCommitMessage
 )
 
 :: Añadir todos los cambios
@@ -69,6 +72,7 @@ echo  Agregando cambios...
 echo.
 echo ===========================================================
 echo.
+
 git add .
 if %ERRORLEVEL% neq 0 (
     echo.
@@ -85,7 +89,8 @@ echo  Realizando commit...
 echo.
 echo ===========================================================
 echo.
-git commit -m "!commitMessage!"
+
+git commit -m "%commitMessage%"
 if %ERRORLEVEL% neq 0 (
     echo.
     echo  Error al realizar el commit.
@@ -101,6 +106,7 @@ echo  Haciendo push al repositorio...
 echo.
 echo ===========================================================
 echo.
+
 git push origin main
 if %ERRORLEVEL% neq 0 (
     echo.
