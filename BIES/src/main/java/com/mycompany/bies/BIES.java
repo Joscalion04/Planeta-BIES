@@ -1,6 +1,11 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
+* @author JOSEPH LEÓN CABEZAS – 118970244
+ * @author JOSUÉ VINDAS PÉREZ – 402500090
+ * @author MANUEL MORA SANDI - 119150694
+ * @author DEREK ROJAS MENDOZA – 604740973
+ *  @version 1.0
+ * @since 2024
+ * */
 
 package com.mycompany.bies;
 
@@ -14,7 +19,10 @@ import com.mycompany.bies.Entidades.serVivo;
  * Clase principal del proyecto BIES.
  * Esta clase contiene el método principal para ejecutar la aplicación.
  * 
- * @author Joscalion
+ * @author JOSEPH LEÓN CABEZAS – 118970244
+ * @author JOSUÉ VINDAS PÉREZ – 402500090
+ * @author MANUEL MORA SANDI - 119150694
+ * @author DEREK ROJAS MENDOZA – 604740973
  */
 public class BIES {
 
