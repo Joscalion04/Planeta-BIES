@@ -1,10 +1,6 @@
 # Planeta-BIES
 Este repositorio alberga el proyecto del Planeta BIES, el cual cuenta con implementaciones de patrones de diseño, testing y construido sobre Maven.
 
-# BIES
-
-Este proyecto es un ejemplo de aplicación Java con Maven que implementa pruebas unitarias utilizando JUnit.
-
 ## Requisitos
 
 - Java JDK 21 o superior
@@ -18,6 +14,12 @@ Dentro de este repositorio tendras varias opciones para gestionar su testing, ge
 
 Para clonar el repositorio, abre la terminal y navega al directorio donde deseas clonar el proyecto. Luego, ejecuta el siguiente comando:
 - " git clone https://github.com/Joscalion04/Planeta-BIES.git "
+
+### Ejecucion del Ciclo de Vida Maven con Verify
+Todos los procesos del ciclo de vida estandar de maven estan preconfigurados en el archivo pom.xml del proyecto para su correcto funcionamiento mediante el comando:
+- " mvn verify "
+  
+Este comando realiza todos los pasos anteriores y ademas en el caso de tener los testings aprobados ofrece la opcion de realizar commit-push al repositorio inmediatamente
 
 ### Ejecucion del Ciclo de Vida Maven Estandar
 Dentro de las opciones puedes optar por llevar a cabo el ciclo de vida maven por pasos individuales dandose el siguiente orden recomendado para el ciclo de vida basico de maven:
@@ -41,8 +43,4 @@ Ademas el repositorio para facilitar el acceso al index de la documentacion pose
 Para hacer el empaquetado del proyecto dentro de la carpeta BIES es necesario que ejecutes el siguiente comando:
  - " mvn package "
 
-### Ejecucion del Ciclo de Vida Maven con Verify
-Todos los pasos anteriores estan preconfigurados en el archivo pom.xml del proyecto para su correcto funcionamiento mediante el comando:
-- " mvn verify "
-  
-Este comando realiza todos los pasos anteriores y ademas en el caso de tener los testings aprobados ofrece la opcion de realizar commit-push al repositorio inmediatamente
+
