@@ -19,7 +19,7 @@ Para clonar el repositorio, abre la terminal y navega al directorio donde deseas
 Todos los procesos del ciclo de vida estandar de maven estan preconfigurados en el archivo pom.xml del proyecto para su correcto funcionamiento mediante el comando:
 - " mvn verify "
   
-Este comando realiza todos los pasos anteriores y ademas en el caso de tener los testings aprobados ofrece la opcion de realizar commit-push al repositorio inmediatamente
+Todos los procesos del ciclo de vida estandar de maven estan preconfigurados y ademas en el caso de tener los testings aprobados ofrece la opcion de realizar commit-push al repositorio inmediatamente
 
 ### Ejecucion del Ciclo de Vida Maven Estandar
 Dentro de las opciones puedes optar por llevar a cabo el ciclo de vida maven por pasos individuales dandose el siguiente orden recomendado para el ciclo de vida basico de maven:
